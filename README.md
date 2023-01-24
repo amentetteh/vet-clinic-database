@@ -100,6 +100,7 @@ In this project, we used a relational database to create the initial data struct
 > Describe between 1-3 key features of the application.
 
 - **Animals table created**
+- **Data inserted**
 - **Queries added**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
