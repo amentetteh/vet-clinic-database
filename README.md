@@ -99,9 +99,8 @@ In this project, we used a relational database to create the initial data struct
 
 > Describe between 1-3 key features of the application.
 
-- **Add related tables**
-- **More queries**
-- **More data**
+- **Animals table created**
+- **Queries added**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,17 +204,12 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Amen TETTEH**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/amentetteh)
+- Twitter: [@twitterhandle](https://twitter.com/amentetteh)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -225,9 +219,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Add related tables**
+- [ ] **More data**
+- [ ] **More queries**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
