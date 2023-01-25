@@ -26,3 +26,46 @@ SELECT * FROM animals WHERE name !='Gabumon';
 (including the animals with the weights that equals precisely 10.4kg or 17.3kg) 
 */
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+/* Transaction and ROLLBACK */
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+
+BEGIN WORK;
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE RIGHT(name,3)!='mon';
+SELECT * FROM animals;
+COMMIT WORK;
+SELECT * FROM animals;
+
+BEGIN WORK;
+DELETE FROM animals;
+SELECT * FROM animals;
+ROLLBACK WORK;
+SELECT * FROM animals;
+
+BEGIN WORK;
+DELETE FROM animals WHERE date_of_birth > '2022-01-01';
+SAVEPOINT SAVEPOINT1;
+UPDATE animals SET weight_kg = weight_kg * -1;
+SELECT * FROM animals;
+ROLLBACK WORK TO SAVEPOINT1;
+SELECT * FROM animals;
+UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+SELECT * FROM animals;
+COMMIT ;
+SELECT * FROM animals;
+
+
+
+SELECT COUNT(*) FROM animals;
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+SELECT AVG(weight_kg)mean_weight FROM animals;
+SELECT neutered, MAX(escape_attempts)most_escaper FROM animals GROUP BY neutered;
+SELECT species,MIN(weight_kg)min_weight,MAX(weight_kg)max_weight FROM animals GROUP BY species;
+SELECT species,AVG(escape_attempts)avg_escape_attempts FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY species;
+
+
