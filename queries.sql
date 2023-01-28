@@ -81,8 +81,8 @@ SELECT c.name,
        b.name,
        date_of_visits
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
-JOIN vets c ON a.vets_id = c.id
+LEFT JOIN animals b ON a.animals_id = b.id
+LEFT JOIN vets c ON a.vets_id = c.id
 WHERE c.name = 'William Tatcher'
 ORDER BY date_of_visits DESC
 LIMIT 1;
@@ -90,8 +90,8 @@ LIMIT 1;
 SELECT c.name,
        COUNT(b.name)
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
-JOIN vets c ON a.vets_id = c.id
+LEFT JOIN animals b ON a.animals_id = b.id
+LEFT JOIN vets c ON a.vets_id = c.id
 WHERE c.name = 'Stephanie Mendez'
 GROUP BY c.name;
 /*3*/
@@ -106,15 +106,15 @@ SELECT b.name,
        c.name,
        a.date_of_visits
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
-JOIN vets c ON a.vets_id = c.id
+LEFT JOIN animals b ON a.animals_id = b.id
+LEFT JOIN vets c ON a.vets_id = c.id
 WHERE c.name = 'Stephanie Mendez'
   AND a.date_of_visits BETWEEN '2020-04-01' AND '2020-08-30';
 /*5*/
 SELECT b.name,
        COUNT(b.name)
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
+LEFT JOIN animals b ON a.animals_id = b.id
 GROUP BY b.name
 ORDER BY COUNT(b.name) DESC
 LIMIT 1;  
@@ -123,31 +123,31 @@ SELECT b.name,
        c.name,
        a.date_of_visits
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
-JOIN vets c ON a.vets_id = c.id
+LEFT JOIN animals b ON a.animals_id = b.id
+LEFT JOIN vets c ON a.vets_id = c.id
 WHERE c.name = 'Maisy Smith'
 ORDER BY a.date_of_visits ASC
 LIMIT 1;
 /*7*/
 SELECT *
 FROM visits a
-JOIN animals b ON a.animals_id = b.id
-JOIN vets c ON a.vets_id = c.id
+LEFT JOIN animals b ON a.animals_id = b.id
+LEFT JOIN vets c ON a.vets_id = c.id
 ORDER BY a.date_of_visits DESC
 LIMIT 1;
 /*8*/
 SELECT COUNT(*)
 FROM visits a
-JOIN vets b ON a.vets_id = b.id
-JOIN animals c ON a.animals_id = c.id
-JOIN specializations d ON b.id = d.vets_id
+LEFT JOIN vets b ON a.vets_id = b.id
+LEFT JOIN animals c ON a.animals_id = c.id
+LEFT JOIN specializations d ON b.id = d.vets_id
 WHERE d.species_id != c.species_id;
 /*9*/
 SELECT d.name
 FROM visits a
-JOIN vets b ON a.vets_id = b.id
-JOIN animals c ON a.animals_id = c.id
-JOIN species d ON c.species_id = d.id
+LEFT JOIN vets b ON a.vets_id = b.id
+LEFT JOIN animals c ON a.animals_id = c.id
+LEFT JOIN species d ON c.species_id = d.id
 WHERE b.name = 'Maisy Smith'
 GROUP BY d.name
 ORDER BY COUNT(d.name) DESC
