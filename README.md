@@ -178,6 +178,11 @@ vet_clinic=#
 - Twitter: [@twitterhandle](https://twitter.com/amentetteh)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
 
+👤 **Vanessa Oliveros Padron**
+
+- GitHub: [@vvoo21](https://github.com/vvoo21)
+- Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
+- LinkedIn: [vaneoliverosp](https://www.linkedin.com/in/vaneoliverosp/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
